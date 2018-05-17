@@ -12,8 +12,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.lichon.PersonDatabase.entity.Person;
 import com.lichon.PersonDatabase.jdbc.PersonJdbcDao;
 
-@SpringBootApplication
-public class PersonDatabaseApplication implements CommandLineRunner {
+//@SpringBootApplication
+public class PersonDatabaseApplicationSpringJdbc implements CommandLineRunner {
 
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -21,7 +21,7 @@ public class PersonDatabaseApplication implements CommandLineRunner {
 	PersonJdbcDao dao;
 
 	public static void main(String[] args) {
-		SpringApplication.run(PersonDatabaseApplication.class, args);
+		SpringApplication.run(PersonDatabaseApplicationSpringJdbc.class, args);
 	}
 
 	@Override
