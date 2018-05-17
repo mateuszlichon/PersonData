@@ -8,6 +8,10 @@ public class Person {
 	private String name;
 	private Date birthDate;
 
+	public Person() {
+		super();
+	}
+
 	public Person(int id, String name, Date birthDate) {
 		super();
 		this.id = id;
@@ -39,4 +43,10 @@ public class Person {
 		this.birthDate = birthDate;
 	}
 
+	@Override
+	public String toString() {
+		return "\nPerson [id=" + id + ", name=" + name + ", birthDate=" + birthDate + "]";
+	}
+
+	
 }
