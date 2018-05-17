@@ -2,8 +2,15 @@ package com.lichon.PersonDatabase.entity;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Person {
 
+	@Id
+	@GeneratedValue
 	private int id;
 	private String name;
 	private String location;
@@ -17,6 +24,13 @@ public class Person {
 		super();
 		this.id = id;
 		this.name = name;
+		this.birthDate = birthDate;
+	}
+	
+	public Person(String name, String location, Date birthDate) {
+		super();
+		this.name = name;
+		this.location = location;
 		this.birthDate = birthDate;
 	}
 
